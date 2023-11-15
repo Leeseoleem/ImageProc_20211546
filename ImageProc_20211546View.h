@@ -67,6 +67,10 @@ public:
 	afx_msg void OnMopologyClosing();
 	afx_msg void OnGeometryZoominPixelCopy();
 	afx_msg void OnGeometryZoominBilinarIntepolation();
+	afx_msg void OnGeometryZoomoutSubsampling();
+	afx_msg void OnGeometryZoomoutSubsamplingMeanSub();
+	afx_msg void OnGeometryAvgFiltering();
+	afx_msg void OnGeometryRotation();
 };
 
 #ifndef _DEBUG  // ImageProc_20211546View.cpp의 디버그 버전

@@ -183,6 +183,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CAngleDialog.h" />
     <ClInclude Include="ChildFrm.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="ImageProc_20211546.h" />
@@ -194,6 +195,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CAngleDialog.cpp" />
     <ClCompile Include="ChildFrm.cpp" />
     <ClCompile Include="ImageProc_20211546.cpp" />
     <ClCompile Include="ImageProc_20211546Doc.cpp" />
