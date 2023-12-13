@@ -8,8 +8,12 @@
 #define IDR_ImageProc20211546TYPE       130
 #define ID_WINDOW_MANAGER               131
 #define IDD_DIALOG_ANGLEINPUT           310
+#define IDD_DIALOG_OPENCV               312
 #define IDC_EDIT2                       1001
 #define IDC_EDIT_ANGLE                  1001
+#define IDC_BUTTON_FILE_SELECT          1002
+#define IDC_BUTTON_VIDEO                1003
+#define IDC_BUTTON_CAMERA               1004
 #define ID_32771                        32771
 #define ID_PIXEL_ADD                    32772
 #define ID_32773                        32773
@@ -77,14 +81,29 @@
 #define ID_GEOMETRY_AVG_FILTERING       32835
 #define ID_32836                        32836
 #define ID_GEOMETRY_ROTATION            32837
+#define ID_32838                        32838
+#define ID_GEOMETRY_HOLIZANTIAL_FLIP    32839
+#define ID_32840                        32840
+#define ID_GEOMETRY_VERTICAL_FLIP       32841
+#define ID_32842                        32842
+#define ID_GEOMETRY_WAPPING             32843
+#define ID_32844                        32844
+#define ID_GEOMETRY_MOPPHING            32845
+#define ID_32846                        32846
+#define ID_AVI_VIEW                     32847
+#define ID                              32848
+#define ID_32849                        32849
+#define ID_OPENCV32850                  32850
+#define ID_OPENCV_                      32851
+#define ID_OPENCV                       32852
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        312
-#define _APS_NEXT_COMMAND_VALUE         32838
-#define _APS_NEXT_CONTROL_VALUE         1002
+#define _APS_NEXT_RESOURCE_VALUE        314
+#define _APS_NEXT_COMMAND_VALUE         32853
+#define _APS_NEXT_CONTROL_VALUE         1005
 #define _APS_NEXT_SYMED_VALUE           310
 #endif
 #endif

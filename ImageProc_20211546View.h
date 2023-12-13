@@ -14,6 +14,7 @@ protected: // serialization에서만 만들어집니다.
 // 특성입니다.
 public:
 	CImageProc20211546Doc* GetDocument() const;
+	int viewMode;
 
 // 작업입니다.
 public:
@@ -71,6 +72,17 @@ public:
 	afx_msg void OnGeometryZoomoutSubsamplingMeanSub();
 	afx_msg void OnGeometryAvgFiltering();
 	afx_msg void OnGeometryRotation();
+	afx_msg void OnGeometryHolizantialFlip();
+	afx_msg void OnGeometryVerticalFlip();
+	afx_msg void OnGeometryWapping();
+	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
+	afx_msg void OnGeometryMopphing();
+	afx_msg void OnAviView();
+	bool bAviMode;
+	CString AviFileName;
+	void LoadAviFile(CDC* pDC);
+	afx_msg void OnOpencv();
 };
 
 #ifndef _DEBUG  // ImageProc_20211546View.cpp의 디버그 버전

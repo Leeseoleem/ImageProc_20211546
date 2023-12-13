@@ -58,6 +58,7 @@ public:
 	int gImageHeight; //기하학적 처리를 위한 이미지 길이
 
 	unsigned char** gResultImg; //기하학적 처리 저장용
+	unsigned char** morphedImg[10]; // 모핑 결과 저장용
 
 	void LoadImageFile(CArchive& ar);
 	void LoadSecondImageFile(CArchive& ar);

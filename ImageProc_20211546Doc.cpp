@@ -34,6 +34,7 @@ CImageProc20211546Doc::CImageProc20211546Doc() noexcept
 	InputImg2 = NULL;
 	ResultImg = NULL;
 	gResultImg = NULL;
+	morphedImg[10] = NULL;
 }
 
 CImageProc20211546Doc::~CImageProc20211546Doc()
@@ -159,7 +160,6 @@ void CImageProc20211546Doc::Dump(CDumpContext& dc) const
 
 // CImageProc20211546Doc 명령
 
-
 void CImageProc20211546Doc::LoadImageFile(CArchive& ar)
 {
 	int maxValue;
@@ -194,6 +194,7 @@ void CImageProc20211546Doc::LoadImageFile(CArchive& ar)
 		BITMAPFILEHEADER bmfh;
 		ar.Read((LPSTR)&bmfh, sizeof(bmfh));
 
+
 		if (bmfh.bfType != (WORD)('B' | ('M' << 8))) return;
 
 		//bitmap info header(이미지 크기) 읽기
@@ -201,6 +202,7 @@ void CImageProc20211546Doc::LoadImageFile(CArchive& ar)
 		// 256 color 인 경우 => 팔레트 O
 		BITMAPINFOHEADER bih;
 		ar.Read((LPSTR)&bih, sizeof(bih));
+
 		ImageWidth = bih.biWidth;
 		ImageHeight = bih.biHeight;
 		depth = bih.biBitCount / 8; //depth: 바이트 단위 | BITCOUNT: 비트 단위 => 8로 나눔
@@ -226,12 +228,16 @@ void CImageProc20211546Doc::LoadImageFile(CArchive& ar)
 		depth = 1;
 	}
 	//메모리 할당
+
 	InputImg = (unsigned char **)malloc(ImageHeight * sizeof(unsigned char*));
 	ResultImg = (unsigned char**)malloc(ImageHeight * sizeof(unsigned char*));
+	
+	
 	for (int i = 0; i < ImageHeight; i++) {
-		InputImg[i] = (unsigned char *)malloc(ImageWidth * depth); 
+		InputImg[i] = (unsigned char*)malloc(ImageWidth * depth);
 		ResultImg[i] = (unsigned char*)malloc(ImageWidth * depth);
 		//첨자 하나 존재 -> 포인터 하나 사라짐
+
 	}
 
 	if(!isbmp) {
@@ -379,3 +385,5 @@ void CImageProc20211546Doc::LoadSecondImageFile(CArchive& ar)
 		}
 	}
 }
+
+

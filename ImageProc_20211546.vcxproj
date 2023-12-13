@@ -76,6 +76,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\opencv\build\x64\vc16\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -96,6 +98,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>vfw32.lib;opencv_world480d.lib</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -185,6 +188,7 @@
   <ItemGroup>
     <ClInclude Include="CAngleDialog.h" />
     <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="COpenCVDlg.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="ImageProc_20211546.h" />
     <ClInclude Include="ImageProc_20211546Doc.h" />
@@ -197,6 +201,7 @@
   <ItemGroup>
     <ClCompile Include="CAngleDialog.cpp" />
     <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="COpenCVDlg.cpp" />
     <ClCompile Include="ImageProc_20211546.cpp" />
     <ClCompile Include="ImageProc_20211546Doc.cpp" />
     <ClCompile Include="ImageProc_20211546View.cpp" />
